@@ -1,0 +1,8 @@
+flowchart TD
+    A[Usuario escribe la nota] --> |Crear| B(Event 'onsubmit')
+    B --> |e.preventDefault detiene el envío| C(Modifica el DOM
+    -Se crea la nota)
+    C --> D(Se genera solicitud POST)
+    D --> E(Servidor procesa y guarda la nota)
+    E --> F(Status Code 201 Created)
+    F --> G(Fin del ciclo)
