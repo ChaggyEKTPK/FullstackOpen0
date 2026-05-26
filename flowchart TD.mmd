@@ -1,0 +1,6 @@
+flowchart TD
+    A[Usuario] --> |Enviar| B(Navegador)
+    B --> |HTTP POST| C(Servidor /new_note)
+    C --> D(Servidor Status Code: 302 Found)
+    D --> |Redirección| E(GET /notes)
+    E --> F(main.css, main.js y data.json)
